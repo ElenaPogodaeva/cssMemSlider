@@ -1,0 +1,177 @@
+:root {
+    --bg-violet: #D5CDFE;
+    --font-blue: #003D74;
+    --font-light-blue: #4da8f8;
+  }
+
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+} 
+
+/*--------------------*/
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color:#000;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.wrapper {
+    background-color:#4da8f8;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0 15px;
+}
+.carousel {
+    padding-top: 30px;
+    flex: 1 1 auto;
+}
+.row__container {
+    display: flex;
+    padding-top:20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    height: 100px;
+}
+.controls {
+   display: flex;
+}
+.controls input[type=radio] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.controls input[type=radio]:checked + .dot {
+    background: #0091EA;
+}
+
+.controls .dot {
+    cursor: pointer;
+    text-indent: -99999px;
+    overflow: hidden;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 3px solid #fff;
+    box-sizing: border-box;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 100;
+    top: 90%;
+    float: right;
+}
+
+
+
+
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #000000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .label-container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin-top:3px;
+  }
+  
+  .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  
+  .label-container input:checked ~ .checkmark:after {
+      display: block;
+    }
+  
+  .label-container .checkmark:after {
+     top: 3px;
+     left: 3px;
+     width: 7px;
+     height: 7px;
+     border-radius: 50%;
+     background: #000000;
+  }
