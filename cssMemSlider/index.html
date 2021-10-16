@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,119 @@
     <title>cssMemSlider</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="wrapper">
-        
-        <div class="carousel">
-            <div class="container">
+        <input type="radio" id="slide-1" name="slides" value="slide-1" />
 
-            </div>
+
+        <input type="radio" id="slide-2" name="slides" value="slide-2" />
+
+
+        <input type="radio" id="slide-3" name="slides" value="slide-3" />
+
+        <input type="radio" id="slide-4" name="slides" value="slide-4" />
+
+        <input type="radio" id="slide-5" name="slides" value="slide-5" checked />
+
+        <div class="carousel">
+        
+            <ul class="slides">
+                <li class="slide slide-1"><img src="img/bear-wild-animal.gif" /></li>
+                <li class="slide slide-2"><img src="img/vaheed.gif" /></li>
+                <li class="slide slide-3"><img src="http://placekitten.com/500/302" /></li>
+                <li class="slide slide-4"><img src="http://placekitten.com/500/303" /></li>
+                <li class="slide slide-5"><img src="http://placekitten.com/500/304" /></li>
+            </ul>
         </div>
         
         <div class="row">
-            <div class="row__container container">
             <div class="row__text">
-                Hello
+                <p class = "text text-1">Hello</p>
+                <p class = "text text-2">Hello2</p>
+                <p class = "text text-3">Hello3</p>
+                <p class = "text text-4">Hello4</p>
             </div>
             <div class="row__controls controls">
-                <label class="label-container">
-                    <input type="radio" checked="checked" name="slides" value="20">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="label-container">
-                    <input type="radio" name="slides" value="25">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="label-container">
-                    <input type="radio" name="slides" value="40">
-                    <span class="checkmark"></span>
-                </label>
                 
-
-             <!--  <input type="radio" id="slide-1" name="slides" value="slide-1" />
-  <label for="slide-1" class="slide-1 dot">Slide 1</label>
-  <input type="radio" id="slide-2" name="slides" value="slide-2" />
-  <label for="slide-2" class="slide-2 dot">Slide 2</label>--> 
+        
+                <label for="slide-1" class="slide-1 dot">Slide 1</label>
+                <label for="slide-2" class="slide-2 dot">Slide 2</label>
+                <label for="slide-3" class="slide-3 dot">Slide 3</label>
+                <label for="slide-4" class="slide-4 dot">Slide 4</label>
+                <label for="slide-5" class="slide-5 dot">Slide 5</label>
             </div>
-          </div>
-    
+        </div>
     </div>
-    </div>
+
+
+
+
+    <!-- <div class="wrapper">
+        <div class="row">
+            <div class="row__container container">
+                <div class="row__text">
+                    Hello
+                </div>
+                <div class="row__controls controls">
+                       <label class="label-container">
+                    <input id="slide-1" type="radio" checked="checked" name="slides" value="20">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="label-container">
+                    <input id="slide-2" type="radio" name="slides" value="25">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="label-container">
+                    <input id="slide-3" type="radio" name="slides" value="40">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="label-container">
+                    <input id="slide-4" type="radio" name="slides" value="40">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="label-container">
+                    <input id="slide-5" type="radio" name="slides" value="40">
+                    <span class="checkmark"></span>
+                </label>
+
+                    <input type="radio" id="slide-1" name="slides" value="slide-1" />
+
+                    <label for="slide-1" class="slide-1 dot">Slide 1</label>
+                    <input type="radio" id="slide-2" name="slides" value="slide-2" />
+
+                    <label for="slide-2" class="slide-2 dot">Slide 2</label>
+                    <input type="radio" id="slide-3" name="slides" value="slide-3" />
+                    <label for="slide-3" class="slide-3 dot">Slide 3</label>
+                    <input type="radio" id="slide-4" name="slides" value="slide-4" />
+                    <label for="slide-4" class="slide-4 dot">Slide 4</label>
+                    <input type="radio" id="slide-5" name="slides" value="slide-5" checked />
+                    <label for="slide-5" class="slide-5 dot">Slide 5</label>
+             
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel">
+            <div class="container">
+                <div class="carousel__container">
+
+
+                    <ul class="slides">
+                        <li class="slide slide-1"><img src="http://placekitten.com/500/306" /></li>
+                        <li class="slide slide-2"><img src="http://placekitten.com/500/301" /></li>
+                        <li class="slide slide-3"><img src="http://placekitten.com/500/302" /></li>
+                        <li class="slide slide-4"><img src="http://placekitten.com/500/303" /></li>
+                        <li class="slide slide-5"><img src="http://placekitten.com/500/304" /></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>-->
+
 </body>
+
 </html>
