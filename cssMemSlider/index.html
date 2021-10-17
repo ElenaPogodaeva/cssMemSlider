@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssMemSlider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <input type="radio" id="slide-1" name="slides" value="slide-1" checked/>
+
+
+        <input type="radio" id="slide-2" name="slides" value="slide-2" />
+
+
+        <input type="radio" id="slide-3" name="slides" value="slide-3" />
+
+        <input type="radio" id="slide-4" name="slides" value="slide-4" />
+
+        <input type="radio" id="slide-5" name="slides" value="slide-5" />
+
+        <div class="carousel">
+            <div class="container">
+                <div class="carousel__container">
+
+                    <ul class="slides">
+                        <li class="slide slide-1"><img src="img/giraffe-chew.gif" /></li>
+                        <li class="slide slide-2"><img src="img/bear-wild-animal.gif" /></li>
+                        <li class="slide slide-3"><img src="img/cats.jpg" /></li>
+                        <li class="slide slide-4"><img src="img/kitty-ducky.gif" /></li>
+                        <li class="slide slide-5"><img src="img/cat-dog.gif" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row__container">
+                    <div class="row__text">
+                        <p class="text text-1">Hello!</p>
+                        <p class="text text-2">Dancing bear</p>
+                        <p class="text text-3">Three cats</p>
+                        <p class="text text-4">Let's play!</p>
+                        <p class="text text-5">Cat Dog Love</p>
+                    </div>
+                    <div class="row__controls controls">
+                        <label for="slide-1" class="slide-1 dot"><span></span></label>
+                        <label for="slide-2" class="slide-2 dot"><span></span></label>
+                        <label for="slide-3" class="slide-3 dot"><span></span></label>
+                        <label for="slide-4" class="slide-4 dot"><span></span></label>
+                        <label for="slide-5" class="slide-5 dot"><span></span></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
