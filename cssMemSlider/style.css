@@ -61,7 +61,7 @@ img {
 html,
 body {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color:#000;
     font-size: 16px;
     line-height: 24px;
@@ -544,7 +544,7 @@ input {
 */
 
 p {
-  transition: opacity 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 #slide-1:checked ~ .row .row__text p.text-1 {
