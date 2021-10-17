@@ -73,37 +73,55 @@ body {
   overflow: hidden;
   background: #0091EA;
   background-color:#4da8f8;
-  padding: 20px 30px;
+  
   color: #fff;
  
   display: flex;
   flex-direction: column;
- 
-}
 
-.container{
-  max-width: 1180px;
-  margin: 0px auto;
-  padding: 0 15px;
 }
 
 .carousel {
- 
+ /* flex: 1 1 auto;*/
+  padding-top:15px;
+}
+
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0px 15px;
   
 }
-
-
-.carousel {
+@media(max-width:1024px) {
+  .container {
+    max-width: 1014px;
+  }
+  
+}
+  @media(max-width:768px) {
+    .container {
+       max-width: 758px;
+    }
+}
+  @media(max-width:420px) {
+    .container {
+       max-width: 410px;
+    }
+}
+.carousel__container {
  
   position: relative;
   border: 10px solid #fff;
   width: 100%;
- /* height:80vh; */
+  height:80vh; 
   box-shadow: 0px 0px 10px #333;
   overflow: hidden;
   background: #ccc;
-  flex: 1 1 auto;
+  
 }
+
+
+
 .carousel .slide {
   margin: 0;
   padding: 0;
@@ -118,7 +136,7 @@ body {
   overflow: hidden;
   padding: 0 0 80% 0;
 }
-.carousel .slide img {
+.carousel__container .slide img {
   position: absolute;
   top:0;
   left:0;
@@ -198,21 +216,17 @@ input[type=radio]:checked ~ .controls .dot {
   transition: all 0.3s ease 0s;
 }
 
-
-
-
-
-.text {
- 
- 
-}
-
-.row {
+.row__container {
   display: flex;
     padding-top:20px;
     padding-bottom: 20px;
     justify-content: space-between;
    /* height: 100px;*/
+}
+
+.row {
+  height: 20vh;
+ 
 }
 
 
@@ -228,9 +242,9 @@ input[type=radio]:checked ~ .controls .dot {
   top: 0;
   left: 0;
   transition: all 0.5s ease-in-out;
-  margin-left: 5em;
   opacity: 0;
   visibility: hidden;
+ /* margin-left: -100px;*/
 }
 /*
 .wrapper {
@@ -486,15 +500,152 @@ input {
     z-index: 2;
   }
   
-  
+  /*
   #slide-1:checked ~ .row .row__text .text-1 {
     margin-left: 0;
     opacity: 1;
     visibility: visible;
   }
+  #slide-1:checked ~ .row .row__text .text-2 {
+    
+    opacity: 0;
+    visibility: hidden;
+    margin-left: -30px;
+  }
+  #slide-2:checked ~ .row .row__text .text-2 {
+    margin-left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+*/
 
+p {
+  transition: opacity 1s ease 0s;
+}
 
+#slide-1:checked ~ .row .row__text p.text-1 {
+  opacity: 1;
+  visibility:visible;
+}
+#slide-1:checked ~ .row .row__text p.text-2,
+#slide-1:checked ~ .row .row__text p.text-3,
+#slide-1:checked ~ .row .row__text p.text-4,
+#slide-1:checked ~ .row .row__text p.text-5
+ {
+  opacity: 0;
+  visibility: hidden;
+}
 
+#slide-2:checked ~ .row .row__text p.text-1,
+#slide-2:checked ~ .row .row__text p.text-3,
+#slide-2:checked ~ .row .row__text p.text-4,
+#slide-2:checked ~ .row .row__text p.text-5
+ {
+  opacity: 0;
+  visibility: hidden;
+}
+#slide-2:checked ~ .row .row__text p.text-2
+ {
+  opacity: 1;
+  visibility: visible;
+}
+
+#slide-3:checked ~ .row .row__text p.text-3
+ {
+  opacity: 1;
+  visibility: visible;
+}
+#slide-3:checked ~ .row .row__text p.text-1,
+#slide-3:checked ~ .row .row__text p.text-2,
+#slide-3:checked ~ .row .row__text p.text-4,
+#slide-3:checked ~ .row .row__text p.text-5
+ {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#slide-4:checked ~ .row .row__text p.text-4
+ {
+  opacity: 1;
+  visibility: visible;
+}
+#slide-4:checked ~ .row .row__text p.text-1,
+#slide-4:checked ~ .row .row__text p.text-2,
+#slide-4:checked ~ .row .row__text p.text-3,
+#slide-4:checked ~ .row .row__text p.text-5
+ {
+  opacity: 0;
+  visibility: hidden;
+}
+#slide-5:checked ~ .row .row__text p.text-5
+ {
+  opacity: 1;
+  visibility: visible;
+}
+#slide-5:checked ~ .row .row__text p.text-1,
+#slide-5:checked ~ .row .row__text p.text-2,
+#slide-5:checked ~ .row .row__text p.text-3,
+#slide-5:checked ~ .row .row__text p.text-4
+ {
+  opacity: 0;
+  visibility: hidden;
+}
+/*
+#slide-1:checked ~ .row .row__text p.text-3 {
+  margin-top: -1000px;
+}
+#slide-1:checked ~ .row .row__text p.text-4 {
+  margin-top: -1000px;
+}
+#slide-1:checked ~ .row .row__text p.text-5 {
+  margin-left: 100px;
+  opacity: 0;
+}*/
+/*
+#slide-2:checked ~ .row .row__text p.text-1 {
+  margin-left: 100px;
+  opacity: 0;
+}
+#slide-2:checked ~ .row .row__text p.text-2 {
+  margin-left: 0;
+  z-index: 2;
+  opacity: 1;
+}
+
+#slide-2:checked ~ .row .row__text p.text-3 {
+  margin-top: -100%;
+}
+#slide-2:checked ~ .row .row__text p.text-4 {
+  margin-top: -100%;
+}
+
+#slide-3:checked ~ .row .row__text p.text-2 {
+  margin-left: 100px;
+  opacity: 0;
+}
+#slide-3:checked ~ .row .row__text p.text-3 {
+  margin-left: 0px;
+  opacity: 1;
+}
+
+#slide-4:checked ~ .row .row__text p.text-3 {
+  margin-left: 100px;
+  opacity: 0;
+}
+#slide-4:checked ~ .row .row__text p.text-4 {
+  margin-left: 0px;
+  opacity: 1;
+}
+
+#slide-5:checked ~ .row .row__text p.text-4 {
+  margin-left: 100px;
+  opacity: 0;
+}
+#slide-5:checked ~ .row .row__text p.text-5 {
+  margin-left: 0px;
+  opacity: 1;
+}
+*/
   .carousel img {
     width: 100%;
   }
