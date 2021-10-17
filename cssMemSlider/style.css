@@ -1,6 +1,6 @@
 :root {
     --bg-violet: #D5CDFE;
-    --font-blue: #003D74;
+    --bg-blue: #4da8f8;
     --font-light-blue: #4da8f8;
   }
 
@@ -71,8 +71,8 @@ body {
  
   min-height: 100%;
   overflow: hidden;
-  background: #0091EA;
-  background-color:#4da8f8;
+  
+  background-color:var(--bg-blue);
   
   color: #fff;
  
@@ -83,18 +83,18 @@ body {
 
 .carousel {
  /* flex: 1 1 auto;*/
-  padding-top:15px;
+  padding-top:25px;
 }
 
 .container {
-  max-width: 1470px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 30px;
   
 }
 @media(max-width:1024px) {
   .container {
-    max-width: 1014px;
+   
   }
   
 }
@@ -108,6 +108,10 @@ body {
        max-width: 410px;
     }
 }
+
+
+
+
 .carousel__container {
  
   position: relative;
@@ -117,7 +121,7 @@ body {
   box-shadow: 0px 0px 10px #333;
   overflow: hidden;
   background: #ccc;
-  
+  border-radius: 30px;
 }
 
 
@@ -176,19 +180,19 @@ input[type=radio]:checked ~ .controls .dot {
   background: #0091EA;
 }*/
 #slide-1:checked ~ .row .controls .dot.slide-1 {
-  background: #0091EA;
+  background: var(--bg-blue);
 }
 #slide-2:checked ~ .row .controls .dot.slide-2 {
-  background: #0091EA;
+  background: var(--bg-blue);
 }
 #slide-3:checked ~ .row .controls .dot.slide-3 {
-  background: #0091EA;
+  background: var(--bg-blue);
 }
 #slide-4:checked ~ .row .controls .dot.slide-4 {
-  background: #0091EA;
+  background: var(--bg-blue);
 }
 #slide-5:checked ~ .row .controls .dot.slide-5 {
-  background: #0091EA;
+  background: var(--bg-blue);
 }
 
  .dot {
@@ -196,32 +200,44 @@ input[type=radio]:checked ~ .controls .dot {
   text-indent: -99999px;
   overflow: hidden;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
   background: #fff;
-  border: 3px solid #fff;
+  border: 5px solid #fff;
   box-sizing: border-box;
   border-radius: 100%;
   
   z-index: 100;
   top: 90%;
  
-  margin-left: 5px;
-  
+  margin-left: 10px;
+  transition: all 0.5s ease 0s;
  
 }
 .dot:hover {
-  background: rgb(134, 132, 132);
-  border-color:rgb(134, 132, 132);
-  transition: all 0.3s ease 0s;
-}
+  background: #000;
+  border-color:#000;
+  transition: all 0.5s ease 0s;
 
+}
+.dot:focus, .dot:active {
+  background: #000;
+  border-color:#000;
+  transition: all 0.5s ease 0s;
+}
 .row__container {
   display: flex;
-    padding-top:20px;
+    padding-top:45px;
     padding-bottom: 20px;
+    padding-right: 15px;
     justify-content: space-between;
    /* height: 100px;*/
+   
+}
+@media(max-width:768px) {
+  .row__container {
+    flex-direction: column-reverse;
+  }
 }
 
 .row {
@@ -232,8 +248,9 @@ input[type=radio]:checked ~ .controls .dot {
 
 
 .row__text {
- 
+  flex: 1 1 auto;
   position: relative;
+  font-size: 40px;
 }
 .text {
   width: 100%;
@@ -245,6 +262,13 @@ input[type=radio]:checked ~ .controls .dot {
   opacity: 0;
   visibility: hidden;
  /* margin-left: -100px;*/
+}
+
+
+@media(max-width:768px) {
+  .controls {
+    align-self: center;
+ }
 }
 /*
 .wrapper {
